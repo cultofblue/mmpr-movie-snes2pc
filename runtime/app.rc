@@ -1,0 +1,27 @@
+#include <winver.h>
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040904B0"
+    BEGIN
+      VALUE "CompanyName", "Unofficial fan port"
+      VALUE "FileDescription", "Mighty Morphin Power Rangers: The Movie - PC"
+      VALUE "FileVersion", "1.0.0"
+      VALUE "InternalName", "MMPR_Movie_PC"
+      VALUE "OriginalFilename", "MMPR_Movie_PC.exe"
+      VALUE "ProductName", "Mighty Morphin Power Rangers: The Movie - PC"
+      VALUE "ProductVersion", "1.0.0"
+      VALUE "LegalCopyright", "Game (c) 1995 Bandai / Saban. Port runtime: see LICENSES.txt"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x409, 1200
+  END
+END

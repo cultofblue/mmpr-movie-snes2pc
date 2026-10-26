@@ -1,0 +1,13 @@
+# Hand-given function names. ADDRESS NAME  (these override the automatic ones)
+808000 reset
+808421 nmi_handler
+808B5C irq_handler
+80FA96 brk_handler
+808E80 script_dispatch_A
+809188 script_dispatch_B
+8093AA script_dispatch_C
+84A358 script_dispatch_D
+858053 script_dispatch_E
+808270 read_joypads
+808583 nmi_hdma_setup
+8085C5 dma_upload_oam

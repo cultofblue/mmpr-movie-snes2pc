@@ -1,0 +1,106 @@
+# SNES hardware registers (names follow the common anomie/fullsnes convention)
+# ADDRESS NAME   [description]
+2100 INIDISP    screen display / forced blank
+2101 OBSEL      sprite size and base
+2102 OAMADDL    OAM address low
+2103 OAMADDH    OAM address high
+2104 OAMDATA    OAM data write
+2105 BGMODE     BG mode and tile size
+2106 MOSAIC     mosaic
+2107 BG1SC      BG1 tilemap address
+2108 BG2SC      BG2 tilemap address
+2109 BG3SC      BG3 tilemap address
+210A BG4SC      BG4 tilemap address
+210B BG12NBA    BG1/2 character address
+210C BG34NBA    BG3/4 character address
+210D BG1HOFS    BG1 horizontal scroll
+210E BG1VOFS    BG1 vertical scroll
+210F BG2HOFS    BG2 horizontal scroll
+2110 BG2VOFS    BG2 vertical scroll
+2111 BG3HOFS    BG3 horizontal scroll
+2112 BG3VOFS    BG3 vertical scroll
+2113 BG4HOFS    BG4 horizontal scroll
+2114 BG4VOFS    BG4 vertical scroll
+2115 VMAIN      VRAM address increment mode
+2116 VMADDL     VRAM address low
+2117 VMADDH     VRAM address high
+2118 VMDATAL    VRAM data write low
+2119 VMDATAH    VRAM data write high
+211A M7SEL      mode 7 settings
+211B M7A        mode 7 matrix A
+211C M7B        mode 7 matrix B
+211D M7C        mode 7 matrix C
+211E M7D        mode 7 matrix D
+211F M7X        mode 7 center X
+2120 M7Y        mode 7 center Y
+2121 CGADD      palette address
+2122 CGDATA     palette data write
+2123 W12SEL     window mask BG1/2
+2124 W34SEL     window mask BG3/4
+2125 WOBJSEL    window mask OBJ/color
+2126 WH0        window 1 left
+2127 WH1        window 1 right
+2128 WH2        window 2 left
+2129 WH3        window 2 right
+212A WBGLOG     window logic BG
+212B WOBJLOG    window logic OBJ/color
+212C TM         main screen layers
+212D TS         sub screen layers
+212E TMW        main screen window mask
+212F TSW        sub screen window mask
+2130 CGWSEL     color math control A
+2131 CGADSUB    color math control B
+2132 COLDATA    fixed color
+2133 SETINI     screen mode select
+2134 MPYL       multiply result low
+2135 MPYM       multiply result mid
+2136 MPYH       multiply result high
+2137 SLHV       latch H/V counters
+2138 RDOAM      OAM data read
+2139 RDVRAML    VRAM data read low
+213A RDVRAMH    VRAM data read high
+213B RDCGRAM    palette data read
+213C OPHCT      H counter
+213D OPVCT      V counter
+213E STAT77     PPU1 status
+213F STAT78     PPU2 status
+2140 APUIO0     sound CPU port 0
+2141 APUIO1     sound CPU port 1
+2142 APUIO2     sound CPU port 2
+2143 APUIO3     sound CPU port 3
+2180 WMDATA     WRAM data port
+2181 WMADDL     WRAM address low
+2182 WMADDM     WRAM address mid
+2183 WMADDH     WRAM address high
+4016 JOYSER0    joypad serial port 1
+4017 JOYSER1    joypad serial port 2
+4200 NMITIMEN   interrupt / auto-joypad enable
+4201 WRIO       I/O port write
+4202 WRMPYA     multiplicand
+4203 WRMPYB     multiplier (starts multiply)
+4204 WRDIVL     dividend low
+4205 WRDIVH     dividend high
+4206 WRDIVB     divisor (starts divide)
+4207 HTIMEL     H-IRQ position low
+4208 HTIMEH     H-IRQ position high
+4209 VTIMEL     V-IRQ position low
+420A VTIMEH     V-IRQ position high
+420B MDMAEN     start DMA
+420C HDMAEN     enable HDMA
+420D MEMSEL     ROM speed (FastROM)
+4210 RDNMI      NMI flag / CPU version
+4211 TIMEUP     IRQ flag
+4212 HVBJOY     blank / auto-joypad status
+4213 RDIO       I/O port read
+4214 RDDIVL     quotient low
+4215 RDDIVH     quotient high
+4216 RDMPYL     product/remainder low
+4217 RDMPYH     product/remainder high
+4218 JOY1L      joypad 1 low (A X L R)
+4219 JOY1H      joypad 1 high (B Y Sel Start dpad)
+421A JOY2L      joypad 2 low
+421B JOY2H      joypad 2 high
+421C JOY3L      joypad 3 low
+421D JOY3H      joypad 3 high
+421E JOY4L      joypad 4 low
+421F JOY4H      joypad 4 high

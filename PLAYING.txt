@@ -1,0 +1,80 @@
+MIGHTY MORPHIN POWER RANGERS: THE MOVIE - PC
+===========================================================
+
+A native Windows version of the 1995 Super Nintendo game. The game's own
+code has been translated from SNES machine code into a regular Windows
+program. The SNES graphics and sound chips are reproduced in software.
+
+This is an unofficial fan project. It is not affiliated with or endorsed by
+Bandai, Saban, Hasbro or Nintendo. NO GAME DATA IS INCLUDED.
+
+
+WHAT YOU NEED
+-------------
+Your own copy of the game ROM:
+    Mighty Morphin Power Rangers - The Movie (USA).sfc
+It must be the USA version (CRC32 E3EF6201). Files with a 512-byte copier
+header (.smc) work too.
+
+Put the ROM next to MMPR_Movie_PC.exe (or one folder up) and double-click
+the .exe. You can also drag the ROM onto the .exe.
+
+
+CONTROLS (change them in settings.ini, created the first time you play)
+--------
+  Player 1 keyboard:  Arrows = D-pad    Enter = Start    Right Shift = Select
+                      Z = B   A = Y   X = A   S = X   D = L   C = R
+  Player 2 keyboard:  I J K L = D-pad   Backspace = Start   \ = Select
+                      N = B   H = Y   M = A   U = X   Y = L   O = R
+  Controllers:        any Xbox-style pad. The first one connected is player 1,
+                      the second is player 2 (bottom button = SNES B, left
+                      stick = D-pad).
+  Player 2 joins a game in progress by pressing Start.
+
+
+HOTKEYS
+-------
+  F1 / F2     infinite health for player 1 / player 2 (on/off)
+  F5 / F9     save state / load state
+  F6 / F7     next / previous save slot (10 slots)
+  R (hold)    rewind (up to 20 seconds)
+  Tab (hold)  fast forward
+  P           pause
+  F8          reset
+  F12         screenshot
+  F11 or Alt+Enter   fullscreen
+  Esc         quit
+
+
+SETTINGS (settings.ini)
+--------
+  - every key and controller button
+  - window size, fullscreen, sharp or smooth pixels
+  - whole-number scaling, 4:3 TV shape, scanlines (old-TV look)
+  - seconds of rewind to keep
+  - input recording (off by default)
+Delete settings.ini to get a fresh copy with every option listed.
+
+
+FOLDERS (created next to the .exe)
+-------
+  states\       save states
+  screenshots\  F12 screenshots (PNG, 1024x896)
+  movies\       button recordings, only if record = 1 in settings.ini
+
+
+ACCURACY
+--------
+A complete 47-minute playthrough (start to ending credits) was replayed on
+this version and on a reference SNES emulator, and every one of its
+169,286 frames matched exactly.
+
+
+CREDITS
+-------
+  Port: Chris, with Claude.
+  SNES graphics/sound chip emulation: LakeSnes by angelo_wf (MIT license).
+  Window, audio and controllers: SDL2 (zlib license).
+  PNG screenshots: stb_image_write by Sean Barrett (public domain / MIT).
+  Original game (c) 1995 Bandai / Saban Entertainment.
+  See THIRD_PARTY_LICENSES.md.

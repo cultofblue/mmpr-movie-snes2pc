@@ -1,0 +1,3 @@
+*.cov binary
+*.inp binary
+*.sh text eol=lf

@@ -1,0 +1,24 @@
+# Anything generated from the ROM must never be committed
+*.sfc
+*.smc
+*.swc
+*.fig
+build/
+dist/
+*.state
+states/
+screenshots/
+movies/
+# downloaded build dependencies (SDL2)
+deps/
+# personal icon files (see assets/README.md)
+assets/icon.ico
+assets/icon64.rgba
+assets/*.png
+# local settings / OS / editor clutter
+settings.ini
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,20 @@
+diff --git a/snes/cpu.c b/snes/cpu.c
+index 7b208dd..36a5473 100644
+--- a/snes/cpu.c
++++ b/snes/cpu.c
+@@ -27,6 +27,7 @@ static uint16_t cpu_readWord(Cpu* cpu, uint32_t adrl, uint32_t adrh, bool intChe
+ static void cpu_writeWord(Cpu* cpu, uint32_t adrl, uint32_t adrh, uint16_t value, bool reversed, bool intCheck);
+ static void cpu_doInterrupt(Cpu* cpu);
+ static void cpu_doOpcode(Cpu* cpu, uint8_t opcode);
++void (*cpu_trace_hook)(uint32_t adr, bool mf, bool xf, bool e) = 0;
+ 
+ // addressing modes and opcode functions not declared, only used after defintions
+ 
+@@ -119,6 +120,7 @@ void cpu_runOpcode(Cpu* cpu) {
+     cpu_read(cpu, (cpu->k << 16) | cpu->pc);
+     cpu_doInterrupt(cpu);
+   } else {
++    if(cpu_trace_hook) cpu_trace_hook((cpu->k << 16) | cpu->pc, cpu->mf, cpu->xf, cpu->e);
+     uint8_t opcode = cpu_readOpcode(cpu);
+     cpu_doOpcode(cpu, opcode);
+   }

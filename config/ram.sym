@@ -1,0 +1,59 @@
+# RAM variables. ADDRESS NAME description
+# Addresses are WRAM offsets. $0000-$00FF are also used as direct page (D is always 0).
+# Confirmed by experiment (poking the value and watching the game) unless marked "likely".
+
+# --- system ---
+000C nmi_frame_count  incremented every NMI (vblank)
+0012 nmi_mode         index into the NMI routine table at $80:844D (x2)
+0114 camera_x         likely: horizontal scroll position of the stage
+0182 joy1_held        joypad 1 buttons currently held (copy of JOY1L/H)
+0184 joy1_pressed     joypad 1 buttons newly pressed this frame
+0186 joy2_held        joypad 2 buttons currently held
+0188 joy2_pressed     joypad 2 buttons newly pressed this frame
+0244 frame_count      incremented every NMI
+
+# --- players (index X/Y = player*4: P1 = 0, P2 = 4) ---
+0602 credits          continues left ("CREDIT-4")
+060A player_lives     lives shown as "x2" on the HUD
+0610 player_score     score, BCD, 4 bytes for P1 ($0610 = low byte; HUD shows 1234 for $1234)
+0628 player_health    health segments 0-5 (P2 at $062C)
+
+# --- objects (structure of arrays; X = slot*4, 36 slots; slot 0 = player 1) ---
+0F00 obj_active       object slot in use / type (0 = free). 36 slots, X = slot*4
+0F02 obj_0F00_2       object table @$0F00 (+2), meaning not identified yet
+0F90 obj_0F90         object table @$0F90 (+0), meaning not identified yet
+0F92 obj_0F90_2       object table @$0F90 (+2), meaning not identified yet
+1020 obj_x            object X position, 16.8 fixed point (24-bit)
+1021 obj_x_px         object X position, whole pixels
+1022 obj_1020_2       object table @$1020 (+2), meaning not identified yet
+10B0 obj_y            object Y position (height), 16.8 fixed point
+10B1 obj_y_px         object Y position, whole pixels (ground ~$B0)
+10B2 obj_10B0_2       object table @$10B0 (+2), meaning not identified yet
+1140 obj_1140         object table @$1140 (+0), meaning not identified yet
+1142 obj_1140_2       object table @$1140 (+2), meaning not identified yet
+11D0 obj_11D0         object table @$11D0 (+0), meaning not identified yet
+11D2 obj_11D0_2       object table @$11D0 (+2), meaning not identified yet
+1260 obj_1260         object table @$1260 (+0), meaning not identified yet
+1262 obj_1260_2       object table @$1260 (+2), meaning not identified yet
+12F0 obj_12F0         object table @$12F0 (+0), meaning not identified yet
+12F2 obj_12F0_2       object table @$12F0 (+2), meaning not identified yet
+1380 obj_1380         object table @$1380 (+0), meaning not identified yet
+1382 obj_1380_2       object table @$1380 (+2), meaning not identified yet
+1383 obj_1380_3       object table @$1380 (+3), meaning not identified yet
+1410 obj_1410         object table @$1410 (+0), meaning not identified yet
+1412 obj_1410_2       object table @$1410 (+2), meaning not identified yet
+14A0 obj_14A0         object table @$14A0 (+0), meaning not identified yet
+14A2 obj_14A0_2       object table @$14A0 (+2), meaning not identified yet
+14F0 obj_14F0         object table @$14F0 (+0), meaning not identified yet
+14F2 obj_14F0_2       object table @$14F0 (+2), meaning not identified yet
+1540 obj_1540         object table @$1540 (+0), meaning not identified yet
+1542 obj_1540_2       object table @$1540 (+2), meaning not identified yet
+1590 obj_1590         object table @$1590 (+0), meaning not identified yet
+1592 obj_1590_2       object table @$1590 (+2), meaning not identified yet
+15E0 obj_15E0         object table @$15E0 (+0), meaning not identified yet
+15E1 obj_15E0_1       object table @$15E0 (+1), meaning not identified yet
+15E2 obj_15E0_2       object table @$15E0 (+2), meaning not identified yet
+1630 obj_1630         object table @$1630 (+0), meaning not identified yet
+1632 obj_1630_2       object table @$1630 (+2), meaning not identified yet
+1680 obj_frame_ptr    object animation frame pointer (changes every animation frame)
+1682 obj_1680_2       object table @$1680 (+2), meaning not identified yet
